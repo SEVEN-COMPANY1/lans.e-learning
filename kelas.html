@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Pilihan Kelas</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-indigo-50 via-white to-pink-50 min-h-screen">
+
+<div class="max-w-6xl mx-auto py-20 px-6">
+
+    <!-- HEADER PAKET -->
+    <div class="text-center mb-14">
+        <span class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">
+            Paket Belajar
+        </span>
+        <h1 id="judulPaket" class="text-4xl md:text-5xl font-bold mt-3 mb-4"></h1>
+        <p id="deskripsiPaket" class="text-gray-500 max-w-xl mx-auto"></p>
+    </div>
+
+    <!-- PILIH KELAS -->
+    <div class="bg-white rounded-[2rem] shadow-xl p-10 md:p-14">
+
+        <h2 class="text-2xl font-semibold mb-8 flex items-center gap-2">
+            📘 Pilih Kelas
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- CARD KELAS -->
+            <a href="soal/kelas1.html" class="kelas-card">
+                <span>📗</span>
+                <h3>Kelas 1</h3>
+                <p>Penjumlahan & pengurangan dasar</p>
+            </a>
+
+            <a href="soal/kelas2.html" class="kelas-card">
+                <span>📘</span>
+                <h3>Kelas 2</h3>
+                <p>Operasi hitung & soal cerita</p>
+            </a>
+
+            <a href="soal/kelas3.html" class="kelas-card">
+                <span>📙</span>
+                <h3>Kelas 3</h3>
+                <p>Perkalian & pembagian</p>
+            </a>
+
+            <a href="soal/kelas4.html" class="kelas-card">
+                <span>📕</span>
+                <h3>Kelas 4</h3>
+                <p>Pecahan & bangun datar</p>
+            </a>
+
+            <a href="soal/kelas5.html" class="kelas-card">
+                <span>📓</span>
+                <h3>Kelas 5</h3>
+                <p>Desimal & volume bangun</p>
+            </a>
+
+            <a href="soal/kelas6.html" class="kelas-card">
+                <span>📔</span>
+                <h3>Kelas 6</h3>
+                <p>Persiapan ujian & evaluasi</p>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- NAVIGASI -->
+    <div class="mt-14 text-center">
+        <a href="dasboard.html"
+           class="inline-block text-sm font-semibold text-gray-500 hover:text-black transition">
+           ← Kembali ke Dashboard
+        </a>
+    </div>
+
+</div>
+
+<!-- SCRIPT PAKET -->
+<script>
+const paket = new URLSearchParams(window.location.search).get("paket");
+
+const data = {
+    one: {
+        title: "Paket One Month",
+        desc: "Akses 1 bulan bank soal interaktif dan video pembelajaran kelas 1–6."
+    },
+    three: {
+        title: "Paket Three Month",
+        desc: "Akses 3 bulan latihan intensif dengan evaluasi berkala."
+    },
+    six: {
+        title: "Paket Six Month",
+        desc: "Akses 6 bulan bank soal lengkap + video + laporan perkembangan."
+    }
+};
+
+document.getElementById("judulPaket").textContent = data[paket]?.title || "Paket Belajar";
+document.getElementById("deskripsiPaket").textContent = data[paket]?.desc || "";
+</script>
+
+<!-- STYLE CARD -->
+<style>
+.kelas-card{
+    background:#f9fafb;
+    border-radius:1.5rem;
+    padding:32px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    font-weight:600;
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+    transition:.35s ease;
+}
+.kelas-card span{
+    font-size:2.5rem;
+}
+.kelas-card h3{
+    font-size:1.25rem;
+}
+.kelas-card p{
+    font-size:.9rem;
+    font-weight:400;
+    color:#6b7280;
+}
+.kelas-card:hover{
+    background:black;
+    color:white;
+    transform:translateY(-6px);
+}
+.kelas-card:hover p{
+    color:#e5e7eb;
+}
+</style>
+
+</body>
+</html>

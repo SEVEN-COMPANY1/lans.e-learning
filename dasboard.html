@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANS E-Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        #mobile-menu { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+            <div class="text-2xl font-serif font-bold">LANS.</div>
+
+            <div class="hidden md:flex space-x-10 text-xs uppercase tracking-widest text-gray-600">
+                <a href="#home" class="hover:text-black">Home</a>
+                <a href="#kelas" class="hover:text-black">Kelas</a>
+                <a href="login.html" id="loginMenu" class="hover:text-black">Login</a>
+                <a href="bayar.html" id="bayarMenu" class="hover:text-black">Pembayaran</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile -->
+    <div id="mobile-menu" class="hidden bg-white border-t px-4 py-6 space-y-4">
+        <a href="#home" class="block text-center">Home</a>
+        <a href="#kelas" class="block text-center">Kelas</a>
+        <a href="login.html" class="block text-center">Login</a>
+        <a href="bayar.html" class="block text-center">Pembayaran</a>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="pt-40 pb-28 text-center">
+    <span class="text-xs tracking-widest text-gray-400 uppercase">Eksklusif & Terpercaya</span>
+    <h1 class="text-5xl md:text-7xl font-serif my-6">
+        Belajar dengan <span class="italic">Gaya</span><br>Kualitas Tinggi
+    </h1>
+    <p class="max-w-xl mx-auto text-gray-500 mb-10">
+        LANS menyediakan pembelajaran matematika interaktif untuk SD kelas 1–6.
+    </p>
+    <div class="flex justify-center gap-4">
+        <a href="#kelas" class="bg-black text-white px-10 py-4 rounded-full">Lihat Kelas</a>
+        <a href="login.html" class="border px-10 py-4 rounded-full">Masuk Akun</a>
+    </div>
+</section>
+
+<!-- ================= KELAS ================= -->
+<section id="kelas" class="py-20 bg-gray-50">
+<div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-serif mb-12">Pilihan Kelas</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- ONE MONTH -->
+        <div class="bg-white rounded-3xl shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                 class="h-56 w-full object-cover rounded-t-3xl">
+            <div class="p-6">
+                <h3 class="text-xl font-bold">One Month</h3>
+                <p class="text-gray-500 my-4">Akses 1 bulan belajar matematika kelas 1–6.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold">IDR 40K</span>
+                    <a href="kelas.html?paket=one"
+                       class="h-10 w-10 bg-black text-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- THREE MONTH -->
+        <div class="bg-white rounded-3xl shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5"
+                 class="h-56 w-full object-cover rounded-t-3xl">
+            <div class="p-6">
+                <h3 class="text-xl font-bold">Three Month</h3>
+                <p class="text-gray-500 my-4">Akses 3 bulan + latihan intensif.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold">IDR 105K</span>
+                    <a href="kelas.html?paket=three"
+                       class="h-10 w-10 bg-black text-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIX MONTH -->
+        <div class="bg-white rounded-3xl shadow hover:shadow-xl transition">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+                 class="h-56 w-full object-cover rounded-t-3xl">
+            <div class="p-6">
+                <h3 class="text-xl font-bold">Six Month</h3>
+                <p class="text-gray-500 my-4">Akses 6 bulan + bank soal lengkap.</p>
+                <div class="flex justify-between items-center">
+                    <span class="font-bold">IDR 220K</span>
+                    <a href="kelas.html?paket=six"
+                       class="h-10 w-10 bg-black text-white rounded-full flex items-center justify-center">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="py-16 text-center bg-gray-50">
+    <h2 class="font-serif text-3xl mb-4">LANS.</h2>
+    <p class="text-gray-400 text-xs uppercase tracking-widest">
+        LANS-math • Belajar Jadi Menyenangkan
+    </p>
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('mobile-menu');
+
+btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+});
+</script>
+
+</body>
+</html>
