@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Matematika Kelas 1</title>
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -11,134 +12,136 @@
 <!-- CONTAINER -->
 <div class="max-w-5xl mx-auto py-16 px-6">
 
-    <!-- HEADER -->
-    <div class="text-center mb-14">
-        <span class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">
-            Bank Soal Interaktif
-        </span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-3 mb-4">
-            📘 Matematika Kelas 1
-        </h1>
-        <p class="text-gray-500 max-w-xl mx-auto">
-            Latihan penjumlahan, pengurangan, dan perbandingan bilangan secara menyenangkan.
-        </p>
-    </div>
+<!-- HEADER -->
+<div class="text-center mb-14">
+<span class="text-xs uppercase tracking-widest text-indigo-400 font-semibold">
+Bank Soal Interaktif
+</span>
+<h1 class="text-4xl md:text-5xl font-bold mt-3 mb-4">
+📘 Matematika Kelas 1
+</h1>
+<p class="text-gray-500 max-w-xl mx-auto">
+Latihan penjumlahan, pengurangan, dan perbandingan bilangan secara menyenangkan.
+</p>
+</div>
 
-    <!-- CARD SOAL -->
-    <div class="bg-white rounded-[2rem] shadow-xl p-8 md:p-12">
+<!-- CARD SOAL -->
+<div class="bg-white rounded-[2rem] shadow-xl p-8 md:p-12">
 
-        <!-- SOAL ISIAN -->
-        <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-            ✏️ Soal Isian
-        </h2>
+<!-- SOAL ISIAN -->
+<h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+✏️ Soal Isian
+</h2>
 
-        <div id="soalIsian" class="grid md:grid-cols-2 gap-6"></div>
+<div id="soalIsian" class="grid md:grid-cols-2 gap-6"></div>
 
-        <!-- SOAL PILIHAN GANDA -->
-        <h2 class="text-2xl font-semibold mt-14 mb-6 flex items-center gap-2">
-            🟢 Pilihan Ganda
-        </h2>
+<!-- PILIHAN GANDA -->
+<h2 class="text-2xl font-semibold mt-14 mb-6 flex items-center gap-2">
+🟢 Pilihan Ganda
+</h2>
 
-        <div id="soalPG" class="space-y-6"></div>
+<div id="soalPG" class="space-y-6"></div>
 
-        <!-- BUTTON -->
-        <div class="text-center mt-14">
-            <button onclick="cekJawaban()"
-                class="bg-black text-white px-12 py-4 rounded-full text-sm font-semibold tracking-widest hover:bg-gray-800 transition shadow-lg">
-                CEK JAWABAN
-            </button>
-            <p id="hasil" class="mt-6 text-lg font-bold"></p>
-        </div>
-
-    </div>
-
-    <!-- VIDEO -->
-    <div class="mt-16 bg-white rounded-[2rem] shadow-xl p-8 md:p-12">
-        <h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
-            🎥 Video Pembelajaran
-        </h2>
-
-        <div class="aspect-video rounded-2xl overflow-hidden shadow">
-            <iframe
-                src="https://www.youtube.com/embed/0uK6y3rKJbY"
-                class="w-full h-full"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-    <!-- NAVIGASI -->
-    <div class="mt-14 text-center">
-        <a href="../kelas.html?paket=one"
-           class="inline-block text-sm font-semibold text-gray-500 hover:text-black transition">
-           ← Kembali ke Pilihan Kelas
-        </a>
-    </div>
+<!-- BUTTON -->
+<div class="text-center mt-14">
+<button onclick="cekJawaban()"
+class="bg-black text-white px-12 py-4 rounded-full text-sm font-semibold tracking-widest hover:bg-gray-800 transition shadow-lg">
+CEK JAWABAN
+</button>
+<p id="hasil" class="mt-6 text-lg font-bold"></p>
+</div>
 
 </div>
 
-<!-- ================= SCRIPT ================= -->
+<!-- VIDEO -->
+<div class="mt-16 bg-white rounded-[2rem] shadow-xl p-8 md:p-12">
+<h2 class="text-2xl font-semibold mb-6 flex items-center gap-2">
+🎥 Video Pembelajaran
+</h2>
+
+<div class="aspect-video rounded-2xl overflow-hidden shadow">
+<iframe
+  src="https://www.youtube.com/embed/C839M1zfK8I?si=0M0HCHS9MSSNsyW3"
+  class="w-full h-full"
+  allowfullscreen>
+</iframe>
+</div>
+</div>
+
+<!-- NAVIGASI -->
+<div class="mt-14 text-center">
+<a href="../kelas.html?paket=one"
+class="inline-block text-sm font-semibold text-gray-500 hover:text-black transition">
+← Kembali ke Pilihan Kelas
+</a>
+</div>
+
+</div>
+
+<!-- SCRIPT -->
 <script>
 const soalIsian = [
-    ["1 + 2", 3], ["2 + 3", 5], ["4 + 1", 5], ["5 - 2", 3], ["6 - 1", 5],
-    ["7 - 3", 4], ["3 + 4", 7], ["8 - 4", 4], ["9 - 5", 4], ["10 - 6", 4]
+["1 + 2", 3], ["2 + 3", 5], ["4 + 1", 5], ["5 - 2", 3], ["6 - 1", 5],
+["7 - 3", 4], ["3 + 4", 7], ["8 - 4", 4], ["9 - 5", 4], ["10 - 6", 4]
 ];
 
 const soalIsianDiv = document.getElementById("soalIsian");
 soalIsian.forEach((s, i) => {
-    soalIsianDiv.innerHTML += `
-    <div class="bg-gray-50 rounded-2xl p-6 border hover:shadow transition">
-        <p class="font-semibold mb-3">${i+1}. ${s[0]} = ...</p>
-        <input type="number"
-            class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-indigo-400 outline-none"
-            id="i${i}">
-    </div>`;
+soalIsianDiv.innerHTML += `
+<div class="bg-gray-50 rounded-2xl p-6 border hover:shadow transition">
+<p class="font-semibold mb-3">${i+1}. ${s[0]} = ...</p>
+<input type="number"
+class="w-full border rounded-xl px-4 py-3 focus:ring-2 focus:ring-indigo-400 outline-none"
+id="i${i}">
+</div>`;
 });
 
 const pg = [
-    {q:"Mana angka lebih besar?", a:["3","7","5"], k:"7"},
-    {q:"Mana angka lebih kecil?", a:["9","2","6"], k:"2"},
-    {q:"5 + 3 = ?", a:["7","8","6"], k:"8"},
-    {q:"8 - 2 = ?", a:["5","6","7"], k:"6"},
-    {q:"4 + 4 = ?", a:["8","6","7"], k:"8"},
-    {q:"10 - 3 = ?", a:["6","7","8"], k:"7"},
-    {q:"2 + 6 = ?", a:["7","8","6"], k:"8"},
-    {q:"9 - 4 = ?", a:["5","6","4"], k:"5"},
-    {q:"Angka sebelum 5?", a:["4","6","3"], k:"4"},
-    {q:"Angka sesudah 7?", a:["6","8","9"], k:"8"}
+{q:"Mana angka lebih besar?", a:["3","7","5"], k:"7"},
+{q:"Mana angka lebih kecil?", a:["9","2","6"], k:"2"},
+{q:"5 + 3 = ?", a:["7","8","6"], k:"8"},
+{q:"8 - 2 = ?", a:["5","6","7"], k:"6"},
+{q:"4 + 4 = ?", a:["8","6","7"], k:"8"},
+{q:"10 - 3 = ?", a:["6","7","8"], k:"7"},
+{q:"2 + 6 = ?", a:["7","8","6"], k:"8"},
+{q:"9 - 4 = ?", a:["5","6","4"], k:"5"},
+{q:"Angka sebelum 5?", a:["4","6","3"], k:"4"},
+{q:"Angka sesudah 7?", a:["6","8","9"], k:"8"}
 ];
 
 const pgDiv = document.getElementById("soalPG");
 pg.forEach((s, i) => {
-    pgDiv.innerHTML += `
-    <div class="bg-gray-50 rounded-2xl p-6 border hover:shadow transition">
-        <p class="font-semibold mb-3">${i+11}. ${s.q}</p>
-        ${s.a.map(j => `
-            <label class="flex items-center gap-2 mb-2 cursor-pointer">
-                <input type="radio" name="pg${i}" value="${j}" class="accent-indigo-500">
-                <span>${j}</span>
-            </label>
-        `).join("")}
-    </div>`;
+pgDiv.innerHTML += `
+<div class="bg-gray-50 rounded-2xl p-6 border hover:shadow transition">
+<p class="font-semibold mb-3">${i+11}. ${s.q}</p>
+${s.a.map(j => `
+<label class="flex items-center gap-2 mb-2 cursor-pointer">
+<input type="radio" name="pg${i}" value="${j}" class="accent-indigo-500">
+<span>${j}</span>
+</label>
+`).join("")}
+</div>`;
 });
 
 function cekJawaban() {
-    let skor = 0;
+let skor = 0;
 
-    soalIsian.forEach((s, i) => {
-        if (document.getElementById("i"+i).value == s[1]) skor++;
-    });
+soalIsian.forEach((s, i) => {
+const val = document.getElementById("i"+i).value;
+if (val !== "" && val == s[1]) skor++;
+});
 
-    pg.forEach((s, i) => {
-        const jawab = document.querySelector(`input[name="pg${i}"]:checked`);
-        if (jawab && jawab.value === s.k) skor++;
-    });
+pg.forEach((s, i) => {
+const jawab = document.querySelector(`input[name="pg${i}"]:checked`);
+if (jawab && jawab.value === s.k) skor++;
+});
 
-    const hasil = document.getElementById("hasil");
-    hasil.textContent = `Skor Kamu: ${skor} / 20`;
-    hasil.className = skor >= 15
-        ? "mt-6 text-green-600"
-        : "mt-6 text-orange-500";
+const hasil = document.getElementById("hasil");
+hasil.textContent = `Skor Kamu: ${skor} / 20`;
+
+hasil.className = skor >= 15
+? "mt-6 text-green-600"
+: "mt-6 text-orange-500";
 }
 </script>
 
