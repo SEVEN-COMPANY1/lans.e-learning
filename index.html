@@ -74,7 +74,93 @@
         </div>
         <div class="absolute top-20 -left-20 w-64 h-64 bg-gray-50 rounded-full blur-3xl opacity-50"></div>
     </section>
+<section id="about" 
+    class="relative py-28 px-4 bg-center bg-cover"
+    style="background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80');">
 
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
+
+    <!-- Content -->
+    <div class="relative max-w-4xl mx-auto text-center">
+
+        <span class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">
+            Tentang LANS
+        </span>
+
+        <h2 class="text-4xl md:text-5xl font-serif mt-4 leading-tight text-gray-900">
+            Membangun Fondasi 
+            <span class="italic font-light">Matematika</span> yang Kuat
+        </h2>
+
+        <p class="mt-6 text-gray-500 leading-relaxed text-sm md:text-base max-w-2xl mx-auto">
+            LANS adalah platform pembelajaran matematika digital yang dirancang
+            untuk membantu siswa memahami konsep secara logis, visual, dan menyenangkan.
+            Dengan metode interaktif dan kurikulum terstruktur, LANS menghadirkan
+            pengalaman belajar yang efektif dan modern.
+        </p>
+
+        <!-- Statistik -->
+        <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div>
+                <h4 class="text-3xl font-bold text-gray-900">1000+</h4>
+                <p class="text-gray-400 text-sm">Soal Interaktif</p>
+            </div>
+            <div>
+                <h4 class="text-3xl font-bold text-gray-900">95%</h4>
+                <p class="text-gray-400 text-sm">Kepuasan Siswa</p>
+            </div>
+            <div>
+                <h4 class="text-3xl font-bold text-gray-900">24/7</h4>
+                <p class="text-gray-400 text-sm">Akses Belajar</p>
+            </div>
+            <div>
+                <h4 class="text-3xl font-bold text-gray-900">Premium</h4>
+                <p class="text-gray-400 text-sm">Kurikulum</p>
+            </div>
+        </div>
+</section>
+<section id="galeri" class="py-24 px-4 bg-gray-50/60">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <span class="text-xs uppercase tracking-[0.3em] text-gray-400 font-semibold">
+                Galeri Belajar
+            </span>
+            <h2 class="text-4xl md:text-5xl font-serif mt-4">
+                Suasana <span class="italic font-light">Belajar</span> di LANS
+            </h2>
+            <p class="mt-4 text-gray-500 max-w-xl mx-auto text-sm md:text-base">
+                Dokumentasi proses belajar interaktif yang dirancang
+                untuk meningkatkan pemahaman dan kenyamanan siswa.
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+                <img src="https://roboguru-forum-cdn.ruangguru.com/image/c8d6923b-c6f1-4a02-a7ad-b7e9d268b138.png"
+                     class="w-full h-80 object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition"></div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+                <img src="https://armitafibri.com/wp-content/uploads/2021/12/Siswa-SMP.jpg"
+                     class="w-full h-80 object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition"></div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-3xl shadow-lg">
+                <img src="https://catatan-arin.com/wp-content/uploads/2022/06/tips-memilih-bimbel-online-yang-tepat.jpg"
+                     class="w-full h-80 object-cover group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
     <section id="kelas" class="py-20 bg-gray-50/50 px-4 sm:px-10">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
@@ -90,7 +176,7 @@
                     <div class="h-64 bg-gray-200 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Web Dev">
                     </div>
-                    <div class="p-8">
+                    <div onclick="openModal('one')" class="cursor-pointer bg-white rounded-3xl shadow-sm hover:shadow-2xl transition p-8">
                         <h3 class="text-xl font-bold mb-3">One Month</h3>
                         <p class="text-gray-500 text-sm leading-relaxed mb-6">Menghitung matematika dasar dengan animasi dengan akses satu bulan</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
@@ -104,7 +190,7 @@
                     <div class="h-64 bg-gray-200 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="UIUX">
                     </div>
-                    <div class="p-8">
+                    <div onclick="openModal('three')" class="cursor-pointer bg-white rounded-3xl shadow-sm hover:shadow-2xl transition p-8">
                         <h3 class="text-xl font-bold mb-3">Three Month</h3>
                         <p class="text-gray-500 text-sm leading-relaxed mb-6">Seni menciptakan matematika yang fungsional dan indah dan dapat diakses dalam tiga bulan.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
@@ -118,7 +204,7 @@
                     <div class="h-64 bg-gray-200 relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Digital Marketing">
                     </div>
-                    <div class="p-8">
+                    <div onclick="openModal('six')" class="cursor-pointer bg-white rounded-3xl shadow-sm hover:shadow-2xl transition p-8">
                         <h3 class="text-xl font-bold mb-3">Six Month</h3>
                         <p class="text-gray-500 text-sm leading-relaxed mb-6">Dominasi matematika dengan strategi berbasis data yang dapat diakses enam bulan beserta bank soal lengkap.</p>
                         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
@@ -252,17 +338,6 @@
     }
 </script>
 <script>
-    document.querySelectorAll('a[href="#pembayaran"]').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            if (localStorage.getItem('isLogin') !== 'true') {
-                e.preventDefault();
-                alert("Silakan login terlebih dahulu untuk melanjutkan pembayaran.");
-                document.getElementById('login').scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-</script>
-<script>
     const registerBtn = document.getElementById('registerBtn');
 
     if (registerBtn) {
@@ -318,6 +393,116 @@
             location.reload();
         });
     }
+</script>
+<!-- Modal Detail Kelas -->
+<div id="kelasModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden z-[100] flex items-center justify-center px-4">
+    <div class="bg-white max-w-lg w-full rounded-3xl p-8 relative animate-fadeIn">
+
+        <!-- Close Button -->
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black">
+            <i class="fas fa-times text-xl"></i>
+        </button>
+
+        <!-- Content -->
+        <span id="modalBadge" class="inline-block text-xs uppercase tracking-widest font-semibold text-gray-400 mb-2"></span>
+
+        <h3 id="modalTitle" class="text-3xl font-serif mb-4"></h3>
+
+        <p id="modalDesc" class="text-gray-500 text-sm leading-relaxed mb-6"></p>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="bg-gray-50 rounded-xl p-4 text-center">
+                <p class="text-xs uppercase tracking-widest text-gray-400">Durasi</p>
+                <p id="modalDuration" class="font-semibold text-lg"></p>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-4 text-center">
+                <p class="text-xs uppercase tracking-widest text-gray-400">Harga</p>
+                <p id="modalPrice" class="font-semibold text-lg"></p>
+            </div>
+        </div>
+
+        <ul id="modalFeatures" class="text-sm text-gray-500 space-y-2 mb-8"></ul>
+
+        <a href="bayar.html"
+           class="block text-center bg-black text-white py-4 rounded-full font-semibold hover:bg-gray-800 transition">
+            Daftar Sekarang
+        </a>
+    </div>
+</div>
+
+<style>
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+}
+</style>
+<script>
+const kelasData = {
+    one: {
+        badge: "Basic Class",
+        title: "One Month Program",
+        desc: "Program intensif untuk memahami dasar-dasar matematika secara logis dan visual. Cocok untuk pemula yang ingin membangun fondasi kuat.",
+        duration: "1 Bulan",
+        price: "IDR 40.000",
+        features: [
+            "✔ Video pembelajaran interaktif",
+            "✔ Latihan soal harian",
+            "✔ Akses materi 24/7",
+            "✔ Sertifikat digital"
+        ]
+    },
+    three: {
+        badge: "Popular Choice",
+        title: "Three Month Program",
+        desc: "Program lanjutan dengan pendalaman konsep dan strategi penyelesaian soal yang sistematis dan terstruktur.",
+        duration: "3 Bulan",
+        price: "IDR 105.000",
+        features: [
+            "✔ Semua fitur Basic",
+            "✔ Bank soal lengkap",
+            "✔ Evaluasi mingguan",
+            "✔ Progress tracking"
+        ]
+    },
+    six: {
+        badge: "Premium Program",
+        title: "Six Month Program",
+        desc: "Program komprehensif untuk penguasaan matematika jangka panjang dengan strategi berbasis data dan mentoring.",
+        duration: "6 Bulan",
+        price: "IDR 220.000",
+        features: [
+            "✔ Semua fitur Pro",
+            "✔ Tryout berkala",
+            "✔ Analisis hasil belajar",
+            "✔ Prioritas support"
+        ]
+    }
+};
+
+function openModal(type) {
+    const data = kelasData[type];
+
+    document.getElementById('modalBadge').textContent = data.badge;
+    document.getElementById('modalTitle').textContent = data.title;
+    document.getElementById('modalDesc').textContent = data.desc;
+    document.getElementById('modalDuration').textContent = data.duration;
+    document.getElementById('modalPrice').textContent = data.price;
+
+    const featureList = document.getElementById('modalFeatures');
+    featureList.innerHTML = "";
+    data.features.forEach(f => {
+        featureList.innerHTML += `<li>${f}</li>`;
+    });
+
+    document.getElementById('kelasModal').classList.remove('hidden');
+}
+
+function closeModal() {
+    document.getElementById('kelasModal').classList.add('hidden');
+}
 </script>
 </body>
 </html>
